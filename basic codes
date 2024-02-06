@@ -1,0 +1,102 @@
+ 1. SUM  
+   get the first number (num1)
+   get for the second number (num2)
+
+
+   sum = num1 + num2
+
+  Display the sum
+
+2.EVEN OR ODD
+
+  get number from the user(num)
+
+
+  If num is divisible by 2==0:
+    Display "Even"
+  Else:
+    Display "Odd"
+
+
+
+3.SWAP TWO NUMBERS 
+
+  get the first number (num1)
+  get the second number (num2)
+
+
+  Set num1 = num1 + num2
+  Set num2 = num1 - num2
+  Set num1 = num1 - num2
+
+Output:
+  Display the swapped values of num1 and num2
+
+
+
+4.COUNT THE PERFECT SQUARE :
+
+
+get the input value (N)
+
+
+perfectSquaresCount = 0 
+currentNumber = 1 
+
+
+WHILE (currentNumber * currentNumber) < N
+    perfectSquaresCount = perfectSquaresCount + 1 
+    currentNumber = currentNumber + 1
+END WHILE
+
+DISPLAY perfectSquaresCount
+
+
+
+5.REVERSE AN ARRAY:
+
+list = get the input from the user
+
+start = 0
+end = length_of_list(list) - 1
+
+while start < end
+    
+    temp = list[start]
+    list[start] = list[end]
+    list[end] = temp
+    
+    start = start + 1
+    end = end - 1
+
+print  list
+
+
+
+
+6.PRIME OR NOT :
+
+get the number 
+IF number <= 1 THEN
+    PRINT number, " is not a prime number."
+    EXIT // Exit the program
+END IF
+
+
+IF number == 2 OR number == 3 THEN
+    PRINT number, " is a prime number."
+    EXIT 
+END IF
+
+
+divisor = 2
+WHILE divisor * divisor <= number
+    IF (number // divisor) * divisor == number THEN
+        PRINT number, " is not a prime number."
+        EXIT 
+    END IF
+    divisor = divisor + 1
+END WHILE
+
+
+PRINT number, " is a prime number."
