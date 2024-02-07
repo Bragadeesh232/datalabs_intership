@@ -1,0 +1,18 @@
+number = int(input("Enter a number: "))
+
+if number <= 1:
+    print(number, "is not a prime number.")
+    exit()
+
+if number == 2 or number == 3:
+    print(number, "is a prime number.")
+    exit()
+
+divisor = 2
+while divisor * divisor <= number:
+    if (number // divisor) * divisor == number:
+        print(number, "is not a prime number.")
+        exit()
+    divisor += 1
+
+print(number, "is a prime number.")
