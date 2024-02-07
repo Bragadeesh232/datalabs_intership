@@ -54,3 +54,36 @@ s = Suzuki()
 s.mileage()   
 d = Duster()   
 d.mileage()  
+
+
+
+
+           Single Inheritance
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow!"
+
+class Cow(Animal):
+    def sound(self):
+        return "Moo!"
+
+dog = Dog("tommy")
+cat = Cat("Kitty")
+cow = Cow("Bessie")
+
+print(dog.name + " says " + dog.sound())
+print(cat.name + " says " + cat.sound())
+print(cow.name + " says " + cow.sound())
