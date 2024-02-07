@@ -1,4 +1,4 @@
-PRIME Or NOT
+                             PRIME Or NOT
 
 number = int(input("Enter a number: "))
 
@@ -21,7 +21,7 @@ print(number, "is a prime number.")
 
 
 
-ABSTRACTION:
+                            ABSTRACTION:
 
 from abc import ABC, abstractmethod   
 class Car(ABC):   
