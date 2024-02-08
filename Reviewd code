@@ -87,3 +87,74 @@ cow = Cow("Bessie")
 print(dog.name + " says " + dog.sound())
 print(cat.name + " says " + cat.sound())
 print(cow.name + " says " + cow.sound())
+
+
+
+                 method overwriding:
+
+
+
+class Bird:
+def intro(self):
+	print("There are many types of birds.")
+	
+def flight(self):
+	print("Most of the birds can fly but some cannot.")
+
+class sparrow(Bird):
+def flight(self):
+	print("Sparrows can fly.")
+	
+class ostrich(Bird):
+def flight(self):
+	print("Ostriches cannot fly.")
+	
+obj_bird = Bird()
+obj_spr = sparrow()
+obj_ost = ostrich()
+
+obj_bird.intro()
+obj_bird.flight()
+
+obj_spr.intro()
+obj_spr.flight()
+
+obj_ost.intro()
+obj_ost.flight()
+
+
+
+    polymorphism:
+
+
+
+
+class Vehicle:
+    def move(self):
+        pass
+
+class Car(Vehicle):
+    def move(self):
+        return "Driving"
+
+class Boat(Vehicle):
+    def move(self):
+        return "Sailing"
+
+class Airplane(Vehicle):
+    def move(self):
+        return "Flying"
+
+
+def describe_movement(vehicle):
+    print(vehicle.move())
+
+
+car = Car()
+boat = Boat()
+airplane = Airplane()
+
+
+describe_movement(car)       
+describe_movement(boat)      
+describe_movement(airplane)  
