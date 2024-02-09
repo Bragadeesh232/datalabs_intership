@@ -158,3 +158,33 @@ airplane = Airplane()
 describe_movement(car)       
 describe_movement(boat)      
 describe_movement(airplane)  
+..................................................String methods.......................................
+
+
+user_input = input("Enter a string: ")
+
+
+capitalized_string = user_input.capitalize()
+uppercased_string = user_input.upper()
+lowercased_string = user_input.lower()
+titlecased_string = user_input.title()
+swapcased_string = user_input.swapcase()
+stripped_string = user_input.strip()
+replaced_string = user_input.replace('world', 'universe')
+split_string = user_input.split()
+joined_string = '-'.join(split_string)
+starts_with_hello = user_input.startswith('hello')
+ends_with_world = user_input.endswith('world')
+
+
+print(f"Capitalized string: {capitalized_string}")
+print(f"Uppercased string: {uppercased_string}")
+print(f"Lowercased string: {lowercased_string}")
+print(f"Titlecased string: {titlecased_string}")
+print(f"Swapcased string: {swapcased_string}")
+print(f"Stripped string: {stripped_string}")
+print(f"Replaced string: {replaced_string}")
+print(f"Split string: {split_string}")
+print(f"Joined string: {joined_string}")
+print(f"Starts with 'hello': {starts_with_hello}")
+print(f"Ends with 'world': {ends_with_world}")
