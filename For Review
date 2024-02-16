@@ -1,36 +1,90 @@
 
-14/02/2024
-.......................................................... Public/protected/private classes in python .............................................................. 
+16/02/2024
+.......................................................... Corrected     Public/protected/private classes in python .............................................................. 
+
 
 class Car:
     def __init__(self, make, model, year):
-        self.make = make                  
-        self._model = model               
-        self.__year = year                
+        self.make = make
+        self._model = model
+        self.__year = year
 
-    def get_make(self):                  # Public method
+    def get_make(self):  # Public method
         return self.make
 
-    def _get_model(self):                # Protected method
+    def _get_model(self):  # Protected method
         return self._model
 
-    def __get_year(self):                # Private method
+    def get_year(self):  # Public method to access private year
         return self.__year
-
 
 car = Car("Toyota", "Corolla", 2022)
 
-# accessing public member
+
 print("Make:", car.make)
 print("Public method (Make):", car.get_make())
 
-# accessing protected members
+
 print("Protected attribute (Model):", car._model)
 print("Protected method (Model):", car._get_model())
 
-# accessing private member
-print("Private attribute (Year) (indirect access):", car._Car__year)
-print("Private method (Year) (indirect access):", car._Car__get_year())
+# accessing private member using public getter method
+print("Private attribute (Year):", car.get_year())
+
+# AttributeError: '_Car__year' is a private attribute of 'Car'
+# You cannot directly access a private attribute. You can only access it through its getter method.
+
+............................................................using escape characters in python.......................................
+
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+
+# Using escape characters to format the output
+print("Hello, " + name + "!")  # Newline is automatically added after the end of the print statement
+print("Your age is: " + age)
+
+
+print("Hello, " + name + "!\nYour age is: " + age)
+print("Hello, " + name + "!\tYour age is: " + age)
+
+............................................................ Average of an array of double type input from the user at runtime............................
+
+n = int(input("Enter the number of elements: "))
+arr = [float(input(f"Enter element {i + 1}: ")) for i in range(n)]
+average = sum(arr) / len(arr)
+print("Average:", average)
+
+.............................................................Reversing an array of numbers.................................
+
+arr = list(map(int, input("Enter the array elements separated by space: ").split()))
+reversed_arr = arr[::-1]
+print("Reversed array:", reversed_arr)
+
+
+..........................................................Checking if a person's age is above 18 and if he/she is an Indian citizen.......................
+
+age = int(input("Enter your age: "))
+citizenship = input("Are you an Indian citizen? (yes/no): ")
+if age > 18 and citizenship.lower() == "indian":
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+
+.........................................Finding the maximum number from 5 numbers..........................
+
+numbers = [int(input(f"Enter number {i + 1}: ")) for i in range(5)]
+max_number = max(numbers)
+print("Maximum number:", max_number)
+
+.........................................Calculating factorial of a given number.........................
+
+num = int(input("Enter a number: "))
+fact = 1
+for i in range(1, num + 1):
+    fact *= i
+print("Factorial of", num, ":", fact)
+
+
 
 
 
